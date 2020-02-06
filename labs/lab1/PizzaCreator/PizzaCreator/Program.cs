@@ -261,8 +261,6 @@ namespace Pizza
             };
         }
 
-
-
         private static int DisplayMenu ()
         {
             do
