@@ -38,7 +38,7 @@
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtRunLength = new System.Windows.Forms.TextBox();
             this.txtReleaseYear = new System.Windows.Forms.TextBox();
-            this.txtDiscription = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnOk
@@ -49,7 +49,7 @@
             this.btnOk.TabIndex = 0;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.OnOk);
+            this.btnOk.Click += new System.EventHandler(this.OnOK);
             // 
             // btnCancel
             // 
@@ -87,7 +87,6 @@
             this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Release Year";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label4
             // 
@@ -129,19 +128,19 @@
             this.txtReleaseYear.Size = new System.Drawing.Size(100, 20);
             this.txtReleaseYear.TabIndex = 9;
             // 
-            // txtDiscription
+            // txtDescription
             // 
-            this.txtDiscription.Location = new System.Drawing.Point(107, 118);
-            this.txtDiscription.Name = "txtDiscription";
-            this.txtDiscription.Size = new System.Drawing.Size(100, 20);
-            this.txtDiscription.TabIndex = 10;
+            this.txtDescription.Location = new System.Drawing.Point(107, 118);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(100, 20);
+            this.txtDescription.TabIndex = 10;
             // 
             // MovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtDiscription);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtReleaseYear);
             this.Controls.Add(this.txtRunLength);
             this.Controls.Add(this.txtTitle);
@@ -175,6 +174,6 @@
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.TextBox txtRunLength;
         private System.Windows.Forms.TextBox txtReleaseYear;
-        private System.Windows.Forms.TextBox txtDiscription;
+        private System.Windows.Forms.TextBox txtDescription;
     }
 }

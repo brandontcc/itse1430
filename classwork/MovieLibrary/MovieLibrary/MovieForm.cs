@@ -18,26 +18,68 @@ namespace MovieLibrary.Winforms
             InitializeComponent();
         }
 
-        private void Label3_Click ( object sender, EventArgs e )
+        public Movie Movie
         {
-
+            get { return _movie; }
+            set { _movie = value; }
         }
-
-        public Movie movie;
+        private Movie _movie;
 
         private void OnCancel ( object sender, EventArgs e )
         {
-            //todo validation and error reporting
-            DialogResult=DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
             Close();
         }
 
-        private void OnOk ( object sender, EventArgs e )
+        private void OnOK ( object sender, EventArgs e )
         {
-            //todo validation and error reporting
-            DialogResult=DialogResult.OK;
+            // Validation and error reporting
+            var movie = GetMovie();
+            if (!movie.Validate(out var error))
+            {
+                DisplayError(error);
+                return;
+            };
+
+            Movie = movie;
+            DialogResult = DialogResult.OK;
             Close();
         }
 
+        private Movie GetMovie ()
+        {
+            var movie = new Movie();
+
+            movie.Title = txtTitle.Text?.Trim();
+            movie.RunLength = GetAsInt32(txtRunLength);
+            movie.ReleaseYear = GetAsInt32(txtReleaseYear, 1900);
+            movie.Description = txtDescription.Text.Trim();
+            movie.IsClassic = chkIsClassic.Checked;
+
+            return movie;
+        }
+
+        /// <summary>Displays an error message.</summary>
+        /// <param name="message">Error to display.</param>
+        private void DisplayError ( string message )
+        {
+            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private int GetAsInt32 ( Control control )
+        {
+            return GetAsInt32(control, 0);
+        }
+
+        private int GetAsInt32 ( Control control, int emptyValue )
+        {
+            if (String.IsNullOrEmpty(control.Text))
+                return emptyValue;
+
+            if (Int32.TryParse(control.Text, out var result))
+                return result;
+
+            return -1;
+        }
     }
 }
