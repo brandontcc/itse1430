@@ -39,6 +39,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstMovies = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,11 +133,21 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(19, 20);
             this.toolStripMenuItem1.Text = "&";
             // 
+            // lstMovies
+            // 
+            this.lstMovies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstMovies.FormattingEnabled = true;
+            this.lstMovies.Location = new System.Drawing.Point(0, 24);
+            this.lstMovies.Name = "lstMovies";
+            this.lstMovies.Size = new System.Drawing.Size(662, 482);
+            this.lstMovies.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 506);
+            this.Controls.Add(this.lstMovies);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -160,6 +171,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ListBox lstMovies;
     }
 }
 
