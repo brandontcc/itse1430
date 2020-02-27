@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CharacterCreator.Winforms")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Character Creator")]
+[assembly: AssemblyDescription("ITSE-1430")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Brandon Houston")]
 [assembly: AssemblyProduct("CharacterCreator.Winforms")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
